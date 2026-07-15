@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
+<meta content="#001522" name="theme-color"/>
+<title>Questões Práticas do Direito de Contratos</title>
+<meta content="Apresentação web interativa sobre negociação, limites da atuação jurídica e assinaturas eletrônicas." name="description"/>
+<link href="styles/base.css?v=10.0.0" rel="stylesheet"/>
+<link href="styles/deck.css?v=10.0.0" rel="stylesheet"/>
+</head>
+<body class="deck-page">
+<a class="skip-link" href="#s01">Ir para a apresentação</a>
+<div aria-hidden="true" class="loader" id="loader">
+<div class="loader-clause">NEGOCIAR · EQUILIBRAR · EVIDENCIAR</div>
+<svg class="loader-triangle" viewbox="0 0 100 86"><path d="M50 3 97 83H3Z"></path></svg>
+</div>
+<script>
+    (()=>{
+      const release=()=>{
+        const loader=document.getElementById('loader');
+        if(!document.documentElement.classList.contains('presentation-ready')){
+          document.body?.classList.add('presentation-fallback');
+        }
+        if(!loader)return;
+        loader.classList.add('done');
+        window.setTimeout(()=>loader.remove(),1400);
+      };
+      window.__releasePresentationLoader=release;
+      window.addEventListener('load',()=>window.setTimeout(release,900),{once:true});
+      window.setTimeout(release,3200);
+    })();
+  </script>
+<div aria-hidden="true" class="context-cursor" id="cursor"><span>EXPLORAR</span></div>
+<header class="deck-chrome" id="deckChrome">
+<div class="screen-index"><span id="screenNumber">01</span><i></i><span>12</span></div>
+<div class="deck-links">
+<a href="mobile/" rel="noopener" target="_blank">público</a>
+<a href="painel/" rel="noopener" target="_blank">painel</a>
+</div>
+</header>
+<div aria-hidden="true" class="progress-track"><i id="progressBar"></i></div>
+<nav aria-label="Controles da apresentação" class="deck-controls">
+<button aria-label="Voltar" id="prevButton" type="button">←</button>
+<button aria-label="Avançar" id="nextButton" type="button">→</button>
+<button aria-pressed="false" id="motionButton" type="button">movimento</button>
+</nav>
+<main id="deck">
+<section class="screen hero is-dark" data-cursor="EXPLORAR" data-title="Abertura" id="s01">
+<div aria-hidden="true" class="ambient-lines"></div>
+<div aria-hidden="true" class="hero-geometry"><i></i><i></i><i></i></div>
+<div class="screen-shell hero-layout">
+<div class="hero-copy">
+<p class="eyebrow reveal">Palestra</p>
+<h1 aria-label="Questões Práticas do Direito de Contratos" class="display-title hero-title" id="heroTitle"><span class="title-line">Questões Práticas</span><span class="title-line">do Direito de</span><span class="title-line">Contratos</span></h1>
+<p class="hero-subtitle reveal delay-1" id="heroSubtitle">Negociação, limites da atuação jurídica e assinaturas eletrônicas</p>
+</div>
+<aside class="hero-aside reveal delay-2">
+<div class="logo-tile logo-tile--hero"><img alt="Leroy Merlin" src="assets/brand/leroy-merlin-logo.png"/></div>
+<div class="speaker-list">
+<article class="speaker"><span>01</span><div><strong id="speakerName">Rodrigo Kalil Ribeiro</strong><small id="speakerInfo">Diretor Jurídico &amp; Compliance<br/>Leroy Merlin e Obramax</small></div></article>
+</div>
+</aside>
+</div>
+<div class="hero-actions"><button class="hero-qr-button" id="heroQrButton" type="button"><span>Acompanhar pelo celular</span><i></i></button><button class="scroll-indicator" data-next="" type="button"><span>avançar</span><i></i></button></div>
+</section>
+<section class="screen decision is-dark" data-cursor="DECIDIR" data-title="Antes da cláusula" id="s02">
+<div class="screen-shell decision-layout">
+<div class="section-copy">
+<p class="eyebrow reveal">Origem do contrato</p>
+<h2 class="section-title">Antes da cláusula, existe uma decisão.</h2>
+<p class="section-lead reveal delay-1">Todo contrato registra uma negociação que já começou.</p>
+</div>
+<div class="decision-interaction-stack decision-only">
+<div aria-label="Elementos que antecedem o documento" class="decision-constellation">
+<span style="--x:9%;--y:18%;--d:.05s">interesses</span>
+<span style="--x:64%;--y:7%;--d:.12s">prazo</span>
+<span style="--x:78%;--y:42%;--d:.18s">risco</span>
+<span style="--x:52%;--y:78%;--d:.24s">operação</span>
+<span style="--x:8%;--y:70%;--d:.3s">responsabilidade</span>
+<div class="decision-core"><small>ponto de</small><strong>decisão</strong></div>
+<svg aria-hidden="true" viewbox="0 0 600 500"><path d="M70 90C220 80 240 210 300 250S480 120 540 80M70 390C160 310 215 300 300 250S430 390 520 360M300 250 472 224M300 250 130 270"></path></svg>
+</div>
+
+</div>
+</div>
+</section>
+<section class="screen poll-screen is-dark" data-cursor="VOTAR" data-title="Enquete · Visual e governança" id="s03-poll">
+<div class="screen-shell poll-screen-shell">
+<div class="poll-screen-copy">
+<p class="eyebrow reveal">Enquete ao vivo</p>
+<h2 class="section-title">Visual Law e governança da decisão</h2>
+<p class="section-lead reveal delay-1">A votação ocupa uma tela própria para não invadir o conteúdo da palestra. Abra, pause, encerre e libere os resultados pelo painel administrativo.</p>
+<button class="poll-trigger poll-screen-start reveal delay-2" data-show-poll="negotiation" type="button">Abrir votação no celular</button>
+</div>
+<div class="poll-stage-card reveal delay-1">
+<small id="pollScreenStatus">Aguardando o apresentador</small>
+<h3 id="pollScreenQuestion">Em contratos complexos, qual recurso visual mais fortalece a governança da decisão?</h3>
+<div class="poll-screen-results" id="pollScreenResults"></div>
+<p id="pollScreenFootnote">Resultados ficam ocultos até liberação no painel.</p>
+</div>
+</div>
+</section>
+
+<section class="screen negotiation is-light" data-cursor="NEGOCIAR" data-title="Negociação" id="s03">
+<div class="screen-shell">
+<header class="section-header split-header">
+<div><p class="eyebrow reveal">Escolhas e prioridades</p><h2 class="section-title">Negociação contratual</h2></div>
+<p class="section-note reveal delay-1">Acordos não surgem quando todos os elementos têm o mesmo peso. Eles surgem quando prioridades são reconhecidas.</p>
+</header>
+<div aria-label="Elementos de negociação" class="negotiation-stage">
+<div class="negotiation-side side-a"><span>preço</span><span>prazo</span><span>garantia</span></div>
+<div class="agreement-core"><i></i><strong>acordo</strong><small>possível</small></div>
+<div class="negotiation-side side-b"><span>risco</span><span>saída</span><span>responsabilidade</span></div>
+</div>
+<div class="question-strip reveal delay-2"><span>O que é essencial?</span><span>O que pode ser compensado?</span><span>Quem decide?</span><span>Quando escalar?</span></div>
+</div>
+</section>
+<section class="screen boundaries is-dark" data-cursor="EQUILIBRAR" data-title="Limites" id="s04">
+<div class="screen-shell">
+<header class="section-header">
+<p class="eyebrow reveal">Limites de atuação</p>
+<h2 class="section-title">Até onde vai o jurídico?</h2>
+</header>
+<div class="boundary-map">
+<article class="boundary-card law-card"><span>01</span><h3>Zona jurídica</h3><p>Validade · responsabilidade · evidência · governança</p></article>
+<div class="shared-zone"><small>decisão informada</small><strong>zona<br/>compartilhada</strong><p>Risco aceitável · mitigação · aprovação · registro</p></div>
+<article class="boundary-card business-card"><span>02</span><h3>Zona comercial</h3><p>Margem · preço · oportunidade · prazo · relacionamento</p></article>
+</div>
+<p class="center-statement reveal delay-2">O jurídico estrutura o risco. A decisão empresarial precisa ter autoridade e rastreabilidade.</p>
+</div>
+</section>
+<section class="screen signatures is-light" data-cursor="EVIDENCIAR" data-title="Assinaturas eletrônicas" id="s05">
+<div class="screen-shell signature-layout">
+<div class="section-copy">
+<p class="eyebrow reveal">Assinaturas eletrônicas</p>
+<h2 class="section-title">Assinar é apenas uma parte da validade.</h2>
+<p class="section-lead reveal delay-1">A questão prática não é só “assinou?”. É quais evidências sustentam a manifestação.</p>
+</div>
+<ol class="evidence-path">
+<li><span>01</span><strong>identidade</strong></li>
+<li><span>02</span><strong>intenção</strong></li>
+<li><span>03</span><strong>integridade</strong></li>
+<li><span>04</span><strong>poderes</strong></li>
+<li><span>05</span><strong>rastreabilidade</strong></li>
+</ol>
+</div>
+<button class="audience-chip" id="signatureQrButton" type="button"><i></i><span>Participe da dinâmica</span></button>
+</section>
+<section class="story-section visual-bridge is-dark" data-cursor="TRANSFORMAR" data-story-steps="3" data-title="Camadas" id="s06">
+<div class="sticky-stage">
+<div class="screen-shell bridge-shell">
+<header class="bridge-head">
+<p class="eyebrow">Do documento à compreensão</p>
+<h2 class="section-title">A camada visual complementa o documento jurídico.</h2>
+</header>
+<div class="bridge-composition">
+<div class="dense-clause"><p>Condição · obrigação · prazo · exceção · responsabilidade · assinatura · prova · transferência · validade · governança</p></div>
+<div class="bridge-line"><i></i><span>organizar</span></div>
+<div class="clarity-system"><span>etapas</span><span>hierarquia</span><span>jornada</span><span>decisões</span></div>
+</div>
+<p class="bridge-caption">O conteúdo continua íntegro. O acesso a ele se torna mais orientado.</p>
+</div>
+</div>
+</section>
+<section class="story-section contract-case is-dark" data-cursor="COMPARAR" data-story-steps="3" data-title="Caso 1 · Contratos" id="s07">
+<div class="sticky-stage case-stage">
+<div class="case-topline"><p class="eyebrow">Caso 1 · Visual Law em contratos</p><span id="case1PhaseLabel">ANTES</span></div>
+<div class="case-title-wrap"><h2>Contratos Leroy Merlin</h2><p>Uma transformação conduzida por hierarquia, jornada e orientação.</p></div>
+<div class="case-scene case1-scene" data-phase="0">
+<div class="case-layer case-before-layer">
+<figure class="document-frame before-frame"><img alt="Contrato fotovoltaico antes do Visual Law" src="assets/documents/lex-contracts/photovoltaic-before-overview.png"/><figcaption>Documento original · visão concentrada</figcaption></figure>
+<div class="case-description"><strong>Densidade</strong><p>Informação jurídica concentrada em uma leitura predominantemente linear.</p></div>
+</div>
+<div class="case-layer case-transform-layer">
+<div class="transform-rings"><i></i><i></i><i></i></div>
+<div class="transform-terms"><span>identificar</span><span>agrupar</span><span>hierarquizar</span><span>orientar</span></div>
+</div>
+<div class="case-layer case-after-layer">
+<div class="hero-documents">
+<figure class="document-page main-doc"><img alt="Capa do contrato fotovoltaico em Visual Law" src="assets/documents/lex-contracts/photovoltaic-after-cover.jpg"/></figure>
+<figure class="document-page support-doc one"><img alt="Página de projeto do contrato em Visual Law" src="assets/documents/lex-contracts/photovoltaic-after-page-01.jpg"/></figure>
+<figure class="document-page support-doc two"><img alt="Página de visita técnica do contrato em Visual Law" src="assets/documents/lex-contracts/photovoltaic-after-page-02.jpg"/></figure>
+</div>
+<div class="after-copy"><strong>Clareza aplicada</strong><p>Etapas, responsabilidades e decisões passam a compor uma jornada visual.</p></div>
+</div>
+</div>
+<div aria-label="Outros contratos em Visual Law" class="contract-gallery">
+<img alt="Contrato de móveis planejados" src="assets/documents/lex-contracts/visual-law-cover-furniture.png"/>
+<img alt="Contrato de pedras sob medida" src="assets/documents/lex-contracts/visual-law-cover-stone.png"/>
+<img alt="Contrato de esquadrias sob medida" src="assets/documents/lex-contracts/visual-law-cover-planned.png"/>
+<img alt="Contrato de aplicação em superfícies" src="assets/documents/lex-contracts/visual-law-cover-surfaces.png"/>
+<div class="contract-count"><strong>17+</strong><span>contratos transformados*</span></div>
+</div>
+<small class="validation-copy">*Quantidade mantida como referência e pendente de validação antes do evento.</small>
+</div>
+</section>
+<section class="story-section adeo-case is-light" data-cursor="EXPLORAR" data-story-steps="3" data-title="Caso 2 · ALL ADEO" id="s08">
+<div class="sticky-stage case-stage">
+<div class="case-topline dark-text"><p class="eyebrow">Caso 2 · Legal Design complementar</p><span id="case2PhaseLabel">DOCUMENTO FORMAL</span></div>
+<div class="case-title-wrap dark-text"><h2>ALL ADEO</h2><p>O conteúdo jurídico em diferentes camadas.</p></div>
+<div class="case-scene adeo-scene" data-phase="0">
+<div class="case-layer adeo-formal-layer">
+<figure class="formal-crop"><img alt="Recorte da Carta de Concessão ALL ADEO" src="assets/documents/all-adeo-before/grant-letter-clause.jpg"/><figcaption>Documento formal · condições e alternativas</figcaption></figure>
+<div class="case-description dark-text"><strong>Precisão jurídica</strong><p>O documento oficial preserva condições, exceções, prazos e efeitos.</p></div>
+</div>
+<div class="case-layer adeo-transform-layer">
+<div class="adeo-keywords"><span>datas</span><span>etapas</span><span>opções</span><span>dúvidas</span></div>
+<svg aria-hidden="true" viewbox="0 0 600 400"><path d="M80 205C190 205 180 90 300 90s120 115 220 115M80 205c110 0 100 110 220 110s130-110 220-110"></path></svg>
+</div>
+<div class="case-layer adeo-visual-layer">
+<div class="adeo-crops">
+<figure class="adeo-crop crop-main"><img alt="Abertura da cartilha ALL ADEO" src="assets/documents/all-adeo-after/all-adeo-hero-program.jpg"/></figure>
+<figure class="adeo-crop"><img alt="Passo a passo do ALL ADEO" src="assets/documents/all-adeo-after/all-adeo-steps.jpg"/></figure>
+<figure class="adeo-crop"><img alt="Perguntas frequentes do ALL ADEO" src="assets/documents/all-adeo-after/all-adeo-faq.jpg"/></figure>
+</div>
+<div class="case-description dark-text"><strong>Orientação visual</strong><p>O conteúdo é reorganizado em jornadas, opções e perguntas práticas.</p></div>
+</div>
+</div>
+<div class="legal-disclaimer">A cartilha apresenta informações gerais e <strong>não substitui</strong> o Estatuto, Contrato e demais documentos oficiais do Programa.</div>
+</div>
+</section>
+<section class="screen synthesis is-dark" data-cursor="LER" data-title="Síntese" id="s09">
+<div class="screen-shell synthesis-shell">
+<header class="section-header"><p class="eyebrow reveal">Síntese prática</p><h2 class="section-title">O que os dois casos ensinam</h2></header>
+<div class="lesson-carousel" id="lessonCarousel">
+<article class="lesson is-current"><span>01</span><p>Clareza não significa perda de rigor.</p></article>
+<article class="lesson"><span>02</span><p>Design não substitui validação jurídica.</p></article>
+<article class="lesson"><span>03</span><p>Hierarquia visual ajuda a localizar decisões.</p></article>
+<article class="lesson"><span>04</span><p>A camada visual precisa permanecer coerente com a fonte oficial.</p></article>
+<article class="lesson"><span>05</span><p>Informação incompreendida também representa risco.</p></article>
+</div>
+<p class="synthesis-line reveal delay-2">Contratos melhores combinam rigor, decisão e compreensão.</p>
+</div>
+</section>
+
+<section class="screen questions-screen is-dark" data-cursor="PERGUNTAS" data-title="Perguntas do público" id="s11-questions">
+<div class="screen-shell questions-screen-shell">
+<header class="section-header split-header">
+<div>
+<p class="eyebrow reveal">Perguntas ao vivo</p>
+<h2 class="section-title">Perguntas do público</h2>
+</div>
+<p class="section-note reveal delay-1">As perguntas chegam pelo celular, ficam em moderação no painel e só aparecem no telão quando forem selecionadas.</p>
+</header>
+<div class="questions-live-grid">
+<article class="featured-question reveal delay-1">
+<small>Pergunta selecionada</small>
+<p id="featuredQuestionText">Nenhuma pergunta destacada ainda.</p>
+</article>
+<aside class="question-queue reveal delay-2">
+<small>Fila de moderação</small>
+<div id="questionQueueList"><span>Aguardando perguntas do público.</span></div>
+</aside>
+</div>
+</div>
+</section>
+<section class="screen closing is-dark" data-cursor="REINICIAR" data-title="Encerramento" id="s10">
+<div class="screen-shell closing-shell">
+<div class="logo-tile logo-tile--closing"><img alt="Leroy Merlin" src="assets/brand/leroy-merlin-logo.png"/></div>
+<div class="closing-verbs"><span>Negociar</span><span>Equilibrar</span><span>Evidenciar</span></div>
+<p class="closing-message reveal delay-1" id="closingMessage">Contratos melhores não nascem apenas de cláusulas melhores.<br/>Nascem de decisões mais claras.</p>
+<div class="closing-meta reveal delay-2"><strong id="closingSpeaker">Rodrigo Kalil Ribeiro</strong></div>
+<div class="closing-actions reveal delay-2"><button id="finalQrButton" type="button">Acessar materiais</button><button data-goto="s01" type="button">Reiniciar</button></div>
+</div>
+</section>
+</main>
+<div class="qr-overlay" hidden="" id="qrOverlay">
+<button aria-label="Fechar QR Code" id="closeQr" type="button">×</button>
+<div class="qr-card">
+<p class="eyebrow">Participe da conversa</p>
+<h2 id="qrHeading">Acesse o conteúdo complementar</h2>
+<div aria-label="QR Code" class="qr-image" id="qrImage"></div>
+<a href="mobile/" id="qrFallback" rel="noopener" target="_blank">Abrir página do público</a>
+</div>
+</div>
+
+<div class="question-overlay" hidden="" id="questionOverlay">
+<div class="question-card"><small>Pergunta do público</small><p id="highlightedQuestion"></p></div>
+</div>
+<script src="scripts/deck.js?v=10.0.0" type="module"></script>
+</body>
+</html>

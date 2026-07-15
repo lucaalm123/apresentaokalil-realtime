@@ -1,0 +1,19 @@
+VERSÃO V9 — TEMPO REAL EM PRODUÇÃO
+
+Esta versão NÃO deve ser enviada por Direct Upload estático se você quiser sincronização em celulares diferentes.
+Ela usa Cloudflare Worker + Static Assets + Durable Object + WebSocket.
+
+Deploy:
+1. Instale Node.js.
+2. Na pasta do projeto, rode: npm install
+3. Faça login: npx wrangler login
+4. Publique: npx wrangler deploy
+
+Rotas:
+/          telão principal
+/mobile/   página do público
+/painel/   painel administrativo
+/ws        WebSocket interno
+/api/health teste do backend
+
+Se publicar como upload estático, o site abre, mas o tempo real externo não funciona.
