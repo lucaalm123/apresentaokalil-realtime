@@ -1,16 +1,18 @@
 {
   "name": "apresentaokalil-realtime",
-  "version": "10.7.0",
+  "version": "10.8.0",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "wrangler dev",
     "deploy": "wrangler deploy",
     "check": "node --check src/worker.js && node --check public/scripts/shared-state.js && node --check public/scripts/mobile.js && node --check public/scripts/panel.js && node --check public/scripts/deck.js",
-    "deploy:dry": "wrangler deploy --dry-run"
+    "deploy:dry": "wrangler deploy --dry-run",
+    "deploy:ci": "pnpm dlx wrangler@4.111.0 deploy --config wrangler.jsonc"
   },
   "devDependencies": {
     "wrangler": "4.111.0"
   },
-  "description": "Apresentação interativa em tempo real com Cloudflare Worker, Durable Objects e WebSocket."
+  "description": "Apresentação interativa em tempo real com Cloudflare Worker, Durable Objects e WebSocket.",
+  "packageManager": "pnpm@10.14.0"
 }

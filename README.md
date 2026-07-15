@@ -32,3 +32,7 @@ O projeto contém `package.json`, `package-lock.json` e `wrangler.jsonc` na raiz
 - `https://apresentaokalil.luckphantomhive.workers.dev/mobile/`
 - `https://apresentaokalil.luckphantomhive.workers.dev/painel/`
 - `https://apresentaokalil.luckphantomhive.workers.dev/api/health`
+
+## Deploy V10.8 — sem npm ci
+
+Se o GitHub Actions apresentou `npm error Exit handler never called!`, use o workflow desta versão. Ele não executa `npm ci`; a publicação é feita com `pnpm dlx wrangler@4.111.0 deploy`.
