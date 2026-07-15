@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#071a22">
+  <title>Painel da palestra · Direito de Contratos</title>
+  <link rel="stylesheet" href="../styles/base.css?v=10.0.0">
+  <link rel="stylesheet" href="../styles/panel.css?v=10.0.0">
+</head>
+<body class="panel-page">
+  <header class="panel-header">
+    <div class="panel-brand">
+      <div class="logo-tile panel-logo"><img src="../assets/brand/leroy-merlin-logo.png" alt="Leroy Merlin"></div>
+      <div><p>Painel da palestra</p><h1 id="panelPresentationTitle">Questões Práticas do Direito de Contratos</h1></div>
+    </div>
+    <div class="panel-status"><span id="modeBadge">TEMPO REAL</span><strong id="masterTimer">00:00:00</strong></div>
+  </header>
+
+  <main class="panel-shell">
+    <section class="panel-card transport-card">
+      <div class="panel-card-head"><div><small>Apresentação</small><h2>Controle do telão</h2></div><div class="connection-dot"><i></i><span id="connectionStatus">Conectando ao Worker…</span></div></div>
+      <div class="preview-grid">
+        <article class="screen-preview current-preview"><small>Tela atual</small><strong id="currentNumber">01</strong><h3 id="currentTitle">Abertura</h3><p id="currentStep">Etapa 1 de 1</p></article>
+        <article class="screen-preview next-preview"><small>Próxima</small><strong id="nextNumber">02</strong><h3 id="nextTitle">Antes da cláusula</h3></article>
+      </div>
+      <div class="transport-buttons">
+        <button id="prevScreen" type="button">← Voltar</button>
+        <button id="nextScreen" type="button" class="primary">Avançar →</button>
+        <button id="startPause" type="button">Iniciar cronômetro</button>
+        <button id="restartDeck" type="button">Reiniciar</button>
+      </div>
+      <div id="screenJump" class="screen-jump" aria-label="Ir para tela"></div>
+      <div class="secondary-actions"><a href="../index.html" target="_blank" rel="noopener">Abrir telão</a><a href="../mobile/" target="_blank" rel="noopener">Abrir página do público</a><button id="toggleChrome" type="button">Ocultar interface</button><button id="lockNavigation" type="button">Bloquear navegação manual</button></div>
+    </section>
+
+    <section class="panel-card performance-card">
+      <div class="panel-card-head"><div><small>Performance</small><h2>Animações</h2></div></div>
+      <div class="segmented" id="motionModes"><button data-motion="full" class="active">Completa</button><button data-motion="reduced">Reduzida</button><button data-motion="low">Emergência</button></div>
+      <p>O modo de emergência remove cursor, fundos dinâmicos e animações pesadas sem interromper a palestra.</p>
+    </section>
+
+    <section class="panel-card qr-panel">
+      <div class="panel-card-head"><div><small>Participação</small><h2>QR Code</h2></div><span id="qrStatus" class="status-pill">Oculto</span></div>
+      <label>Chamada exibida<input id="qrLabelInput" type="text" maxlength="90" value="Acesse o conteúdo complementar"></label>
+      <label>URL da página pública<input id="qrUrlInput" type="url" placeholder="Calculada automaticamente após o deploy"></label>
+      <div class="panel-buttons"><button id="showQr" type="button" class="primary">Exibir no telão</button><button id="hideQr" type="button">Ocultar</button><button id="copyQrUrl" type="button">Copiar URL</button></div>
+      <p id="qrHelp" class="helper-text"></p>
+    </section>
+
+
+
+    <section class="panel-card content-editor-panel">
+      <div class="panel-card-head"><div><small>Conteúdo ao vivo</small><h2>Editar textos da apresentação</h2></div><span class="status-pill muted">Sincroniza no telão</span></div>
+      <label>Título principal<input id="editTitle" type="text"></label>
+      <label>Quebra do título no telão <input id="editTitleLines" type="text" placeholder="Questões Práticas | do Direito de | Contratos"></label>
+      <label>Subtítulo<input id="editSubtitle" type="text"></label>
+      <div class="editor-grid">
+        <label>Nome do palestrante<input id="editSpeakerName" type="text"></label>
+        <label>Cargo<input id="editSpeakerRole" type="text"></label>
+      </div>
+      <label>Empresa / unidade<input id="editSpeakerCompany" type="text"></label>
+      <label>Títulos das 12 telas — um por linha<textarea id="editScreenTitles"></textarea></label>
+      <label>Frase final<textarea id="editClosingMessage"></textarea></label>
+      <div class="panel-buttons wrap"><button id="saveContent" type="button" class="primary">Salvar e atualizar telão</button><button id="resetContent" type="button">Restaurar padrão</button></div>
+      <p class="helper-text">Essas alterações ficam salvas no navegador e são sincronizadas no modo local. Para celulares externos, a sincronização ocorre pelo Worker em tempo real.</p>
+    </section>
+
+    <section class="panel-card poll-panel">
+      <div class="panel-card-head"><div><small>Interação</small><h2>Enquetes</h2></div><span id="pollStatusBadge" class="status-pill">Fechada</span></div>
+      <label>Selecionar enquete<select id="pollSelect"></select></label>
+      <div class="poll-summary"><strong id="pollVoteCount">0</strong><span>respostas registradas</span></div>
+      <div class="panel-buttons wrap"><button id="openPoll" type="button" class="primary">Abrir votação</button><button id="closePoll" type="button">Encerrar votação</button><button id="hidePoll" type="button">Ocultar enquete</button><button id="toggleResults" type="button">Liberar resultados</button><button id="resetPoll" type="button">Zerar</button><button id="exportPoll" type="button">Exportar CSV</button></div>
+      <div id="adminPollResults" class="admin-poll-results"></div>
+    </section>
+
+    <section class="panel-card questions-panel">
+      <div class="panel-card-head"><div><small>Público</small><h2>Perguntas recebidas</h2></div><span id="questionCount" class="status-pill">0</span></div>
+      <div id="questionList" class="question-list"><p class="empty-admin">Nenhuma pergunta recebida.</p></div>
+    </section>
+
+    <section class="panel-card notes-panel">
+      <div class="panel-card-head"><div><small>Privado</small><h2>Notas dos palestrantes</h2></div><button id="exportNotes" type="button" class="small-button">Exportar</button></div>
+      <div class="note-tabs"><button data-note="rodrigo" class="active">Rodrigo</button><button data-note="shared">Compartilhadas</button></div>
+      <textarea id="speakerNotes" placeholder="Notas privadas da tela atual"></textarea>
+      <p class="helper-text">As notas ficam somente neste navegador e não aparecem no telão ou na página do público.</p>
+    </section>
+
+    <section class="panel-card future-panel">
+      <div class="panel-card-head"><div><small>Cloudflare em tempo real</small><h2>Tempo real em produção</h2></div><span class="status-pill muted">Ativo</span></div>
+      <p>Esta versão usa Cloudflare Worker + Durable Object + WebSocket para sincronizar telão, mobile e painel administrativo em tempo real. Caso o WebSocket não conecte, cai para modo local de contingência.</p>
+      <ul><li>Controle remoto do telão por qualquer celular logado no painel.</li><li>Página pública do QR Code sincronizada com a tela atual.</li><li>Enquetes e perguntas atualizadas ao vivo pelo Worker.</li><li>Sem chaves privadas no front-end; autenticação forte pode ser ativada depois no Worker.</li></ul>
+    </section>
+  </main>
+
+  <script type="module" src="../scripts/panel.js?v=10.0.0"></script>
+</body>
+</html>
