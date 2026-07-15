@@ -1,0 +1,12 @@
+O erro "Invalid request body" da tela Connect to a repository pode ser contornado sem usar essa tela.
+
+Use o fluxo GitHub Actions já incluído em:
+.github/workflows/deploy.yml
+
+Passos resumidos:
+1. Envie todos os arquivos deste pacote ao repositório GitHub.
+2. Crie na Cloudflare um API Token com Edit Cloudflare Workers.
+3. No GitHub, cadastre CLOUDFLARE_API_TOKEN e CLOUDFLARE_ACCOUNT_ID em Settings > Secrets and variables > Actions.
+4. Abra Actions > Deploy Cloudflare Worker > Run workflow.
+
+Consulte GUIA-GITHUB-ACTIONS.md.
