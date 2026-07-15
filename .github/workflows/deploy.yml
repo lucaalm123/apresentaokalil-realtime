@@ -10,7 +10,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: cloudflare-production
+  group: apresentaokalil-production
   cancel-in-progress: true
 
 jobs:
@@ -25,7 +25,6 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
-          version: 10
           run_install: false
 
       - name: Use Node.js 22
@@ -44,7 +43,7 @@ jobs:
           node --check public/scripts/qr.js
           node --check public/scripts/qr-lib.js
 
-      - name: Deploy Worker without npm install
+      - name: Deploy Worker
         run: pnpm dlx wrangler@4.111.0 deploy --config wrangler.jsonc
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
