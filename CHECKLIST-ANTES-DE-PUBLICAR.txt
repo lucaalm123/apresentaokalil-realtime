@@ -1,0 +1,13 @@
+CHECKLIST — GITHUB E CLOUDFLARE
+
+[ ] Extraí o ZIP antes de enviar.
+[ ] package.json está na raiz do repositório.
+[ ] wrangler.jsonc está na raiz do repositório.
+[ ] As pastas public e src estão na raiz.
+[ ] O repositório usa a branch main.
+[ ] Conectei o repositório ao Worker apresentaokalil.
+[ ] Deixei Build command vazio.
+[ ] Configurei Deploy command como npx wrangler deploy.
+[ ] O deploy terminou sem erro.
+[ ] /api/health retorna durable-object-websocket.
+[ ] Testei /, /mobile/ e /painel/ em aparelhos diferentes.
