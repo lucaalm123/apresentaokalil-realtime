@@ -8,7 +8,7 @@ const POLL_CATALOG = {
 };
 
 const INITIAL_STATE = {
-  version: 10,
+  version: 10.6,
   currentScreen: 0,
   currentStep: 0,
   sessionStartedAt: null,
@@ -100,6 +100,10 @@ export class PresentationRoom {
     let value = await this.state.storage.get('state');
     if (!value) {
       value = clone(INITIAL_STATE);
+      await this.state.storage.put('state', value);
+    } else if (Number(value.version || 0) < Number(INITIAL_STATE.version)) {
+      value = mergeState(clone(INITIAL_STATE), value);
+      value.version = INITIAL_STATE.version;
       await this.state.storage.put('state', value);
     }
     value.connection = {...(value.connection||{}), mode:'remote', status:'online', participants:this.sockets.size};
